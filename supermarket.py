@@ -23,11 +23,8 @@ with col1:
 if st.button("Calculate") :
     try:
         row=[]
-        amount=int(total_cost.get())
-        
-           
-        
-        discount = 0
+        amount=int(total_cost)
+       
 
         if amount >= 5000:
             discount = (amount / 100) * 20
