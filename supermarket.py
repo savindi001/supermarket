@@ -54,7 +54,7 @@ if st.button("Calculate") :
         df["Discount"] = df["Discount"].apply(lambda x: f"{x:.2f}" if
                                                           isinstance(x, (int, float)) else x)
                 
-        df["Total cost(Rs.)"] = df["Total cost(Rs.)"].apply(lambda x: f"{x:.2f}" if
+        df["Total Cost(Rs.)"] = df["Total Cost(Rs.)"].apply(lambda x: f"{x:.2f}" if
                                                           isinstance(x, (int, float)) else x)
         
         df["Total Bill"] = df["Total Bill"].apply(lambda x: f"{x:.2f}" if
