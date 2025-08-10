@@ -42,7 +42,8 @@ if st.button("Calculate") :
             row.append(["First 20 units", discount, 10, total_cost])
             total_bill = round(total_cost - discount,2)
 
-        total = amount - discount
+        total_bill = amount - discount
+        total_cost=amount-discount
         
 
         st.info(f"Total charge: Rs.{total_cost:.2f}")
