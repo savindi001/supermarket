@@ -23,7 +23,7 @@ with col1:
 if st.button("Calculate") :
     try:
         row=[]
-        amount=float(total_cost.get())
+        amount=int(total_cost.get())
         
            
         
@@ -46,12 +46,14 @@ if st.button("Calculate") :
         total_cost=amount-discount
         
 
-        st.info(f"Total charge: Rs.{total_cost:.2f}")
+        
 
         row.append(["First 20 units", discount, 20, total_cost])
 
         total_bill = round(total_cost - discount,2)
         row.append(["Total charge", "- -", "- -", total_cost])
+
+        st.info(f"Total charge: Rs.{total_bill:.2f}")
 
             
 
