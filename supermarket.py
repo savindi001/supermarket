@@ -43,23 +43,23 @@ if st.button("Calculate") :
         total_cost=amount-discount
     
         
-       
+        row.append(["Total charge", total_cost, discount, total_bill])
 
         st.info(f"Total charge: Rs.{total_bill:.2f}")
 
             
 
         df = pd.DataFrame(row,columns=["Description","Total Cost","Discount","Total Bill"])
-
-        df["Total cost(Rs.)"] = df["Total cost(Rs.)"].apply(lambda x: f"{x:.2f}" if
-                                                          isinstance(x, (int, float)) else x)
                 
         df["Discount"] = df["Discount"].apply(lambda x: f"{x:.2f}" if
                                                           isinstance(x, (int, float)) else x)
                 
+        df["Total cost(Rs.)"] = df["Total cost(Rs.)"].apply(lambda x: f"{x:.2f}" if
+                                                          isinstance(x, (int, float)) else x)
         
         df["Total Bill"] = df["Total Bill"].apply(lambda x: f"{x:.2f}" if
-                                                          isinstance(x, (int, float)) else x)        
+                                                          isinstance(x, (int, float)) else x)
+                
         st.table(df)
 
     except Exception as e:
