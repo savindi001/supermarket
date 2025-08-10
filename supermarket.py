@@ -28,22 +28,22 @@ if st.button("Calculate") :
 
         if amount >= 5000:
             discount = (amount / 100) * 20
-            row.append(["First 20 units", discount, 20, total_cost])
+            row.append(["Total Bill", discount, 20, total_cost])
             total_bill = round(total_cost - discount,2)
         elif amount >= 2500:
             discount = (amount / 100) * 15
-            row.append(["First 20 units", discount, 15, total_cost])
+            row.append(["Total Bill", discount, 15, total_cost])
             total_bill = round(total_cost - discount,2)
         elif amount >= 1000:
             discount = (amount / 100) * 10
-            row.append(["First 20 units", discount, 10, total_cost])
+            row.append(["Total Bill", discount, 10, total_cost])
             total_bill = round(total_cost - discount,2)
 
         total_bill = amount - discount
         total_cost=amount-discount
     
         
-        row.append(["Total charge", discount, "- -", total_cost])
+       
 
         st.info(f"Total charge: Rs.{total_bill:.2f}")
 
